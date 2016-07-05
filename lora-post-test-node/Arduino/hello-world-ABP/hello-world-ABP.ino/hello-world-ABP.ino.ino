@@ -35,5 +35,5 @@ void setup()
 void loop() {
   ttu.sendString("Team Rocket 4TW!");
 
-  delay(5000);
+  delay(20000);
 }

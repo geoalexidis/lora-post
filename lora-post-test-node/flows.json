@@ -1,0 +1,45 @@
+[
+    {
+        "type": "tab",
+        "id": "bdf48d2c.150ad",
+        "label": "Flow 1",
+        "_def": {
+            "defaults": {
+                "label": {
+                    "value": ""
+                }
+            }
+        }
+    },
+    {
+        "id": "b89ee77.73cdc18",
+        "type": "inject",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "topic": "",
+        "payload": "grüezi benni",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "55e6b9ef.3273f8"
+            ]
+        ]
+    },
+    {
+        "id": "55e6b9ef.3273f8",
+        "type": "debug",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 330,
+        "y": 80,
+        "wires": []
+    }
+]
