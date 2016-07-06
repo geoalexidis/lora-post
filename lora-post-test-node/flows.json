@@ -2,7 +2,7 @@
     {
         "type": "tab",
         "id": "bdf48d2c.150ad",
-        "label": "Flow 1",
+        "label": "UI",
         "_def": {
             "defaults": {
                 "label": {
@@ -12,34 +12,612 @@
         }
     },
     {
-        "id": "b89ee77.73cdc18",
-        "type": "inject",
+        "type": "tab",
+        "id": "c0d299c6.328ce8",
+        "label": "Global",
+        "_def": {
+            "defaults": {
+                "label": {
+                    "value": ""
+                }
+            }
+        }
+    },
+    {
+        "id": "50cc33f8.f0b34c",
+        "type": "ui_tab",
+        "z": "bdf48d2c.150ad",
+        "name": "Testscenario",
+        "icon": "gamepad",
+        "theme": "theme-light",
+        "order": "1"
+    },
+    {
+        "id": "3ad111b7.1ea05e",
+        "type": "ui_group",
+        "z": "bdf48d2c.150ad",
+        "name": "Commands",
+        "order": "1",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "5c608041.649bb",
+        "type": "serial-port",
+        "z": "bdf48d2c.150ad",
+        "serialport": "COM8",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false
+    },
+    {
+        "id": "86029726.0e7b78",
+        "type": "ui_group",
+        "z": "bdf48d2c.150ad",
+        "name": "Status",
+        "order": "1",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "d461058f.cdc858",
+        "type": "ui_tab",
+        "z": "bdf48d2c.150ad",
+        "name": "Zusatzmenu",
+        "icon": "settings",
+        "theme": "theme-dark",
+        "order": "1"
+    },
+    {
+        "id": "aebbf418.edf888",
+        "type": "ui_button",
         "z": "bdf48d2c.150ad",
         "name": "",
-        "topic": "",
-        "payload": "grüezi benni",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 130,
-        "y": 80,
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR On SF12",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "1",
+        "x": 110,
+        "y": 160,
         "wires": [
             [
-                "55e6b9ef.3273f8"
+                "8aedf2a6.568d2"
             ]
         ]
     },
     {
-        "id": "55e6b9ef.3273f8",
+        "id": "647d629.552ea9c",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF7",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "2",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "e50c24d4.16ea88",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF8",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "3",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "4c5931a4.48af8",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF9",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "4",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "2ea2cb74.91d984",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF10",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "5",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "ad639096.a86e6",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF11",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "6",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "1fdf6f3c.66dd51",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off SF12",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "7",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "76ba27eb.85fff8",
+        "type": "ui_button",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "tab": "50cc33f8.f0b34c",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "label": "ADR Off All",
+        "color": "",
+        "icon": "",
+        "payload": "",
+        "topic": "8",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "8aedf2a6.568d2"
+            ]
+        ]
+    },
+    {
+        "id": "bccdf097.61ce",
+        "type": "serial out",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "serial": "5c608041.649bb",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "44ac3385.e79dac",
+        "type": "serial in",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "serial": "5c608041.649bb",
+        "x": 90,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5778902d.22649",
+        "type": "ui_template",
+        "z": "bdf48d2c.150ad",
+        "tab": "50cc33f8.f0b34c",
+        "group": "86029726.0e7b78",
+        "name": "",
+        "order": 1,
+        "width": "",
+        "height": "",
+        "format": "{{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "x": 800,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b345b50.489644",
+        "type": "inject",
+        "z": "c0d299c6.328ce8",
+        "name": "inject at start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "13287bb5.6725e4"
+            ]
+        ]
+    },
+    {
+        "id": "502c5150.e9098",
+        "type": "comment",
+        "z": "c0d299c6.328ce8",
+        "name": "READ upcounter AND SET testcounter",
+        "info": "",
+        "x": 190,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bcba5a4f.728308",
+        "type": "function",
+        "z": "c0d299c6.328ce8",
+        "name": "set the vars",
+        "func": "/////////////////////////////\n//  Set upctr\n/////////////////////////////\n// if there was a upctr.txt file, the msg.payload\n// is not zero, therefore upctr can be set to\n// the actual upctr value\nif(msg.payload) {\n// assign the actual value of the upcounter which\n// is saved in upctr.txt file to the global var upctr\n    global.set('upctr',msg.payload);\n}\n// if there is no file available, the counter will\n// be set to 0\nelse {\n    global.set('upctr', 0);\n}\n\n\n/////////////////////////////\n//  Set testvar\n/////////////////////////////\n// set the number of the testvar to 1\nglobal.set('testcount', 1);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "512ad025.00aa",
+                "d6c15009.74c6f"
+            ]
+        ]
+    },
+    {
+        "id": "13287bb5.6725e4",
+        "type": "file in",
+        "z": "c0d299c6.328ce8",
+        "name": "",
+        "filename": "upctr.txt",
+        "format": "utf8",
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "bcba5a4f.728308"
+            ]
+        ]
+    },
+    {
+        "id": "778e5e40.84155",
+        "type": "debug",
+        "z": "c0d299c6.328ce8",
+        "name": "upctr",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 810,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "512ad025.00aa",
+        "type": "change",
+        "z": "c0d299c6.328ce8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "upctr",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 80,
+        "wires": [
+            [
+                "778e5e40.84155"
+            ]
+        ]
+    },
+    {
+        "id": "d6c15009.74c6f",
+        "type": "change",
+        "z": "c0d299c6.328ce8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "testcount",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "313c4f4b.dabb8"
+            ]
+        ]
+    },
+    {
+        "id": "313c4f4b.dabb8",
+        "type": "debug",
+        "z": "c0d299c6.328ce8",
+        "name": "testcounter",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 830,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "265f0f1b.2a993",
+        "type": "catch",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "scope": null,
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "bae07b8.384d888"
+            ]
+        ]
+    },
+    {
+        "id": "bae07b8.384d888",
         "type": "debug",
         "z": "bdf48d2c.150ad",
         "name": "",
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 330,
-        "y": 80,
+        "x": 290,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4f68fef2.c3c75",
+        "type": "comment",
+        "z": "bdf48d2c.150ad",
+        "name": "Testscenario",
+        "info": "",
+        "x": 110,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8aedf2a6.568d2",
+        "type": "function",
+        "z": "bdf48d2c.150ad",
+        "name": "set upctr, testcount",
+        "func": "/**\n * get the counter numbers. send them together\n * with the testscenario number\n * the format is: testcount,upctr,testscnerio\n * ex: 100,200,5\n * meaning: testcount 100, upctr 200, testscenario 5\n * \n * incrementing values at the end\n *\n*/\n\n// get the vars\nvar _testcount = global.get('testcount');\nvar _upctr = global.get('upctr');\n\n// set the payload to the format\nmsg.payload = global.get('testcount') + ',' + global.get('upctr') + ',';\nmsg.payload += msg.topic;\n\n// increment counters\nglobal.set('testcount', (parseInt(_testcount)  + 1));\nglobal.set('upctr', (parseInt(_upctr) + 1));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "bfed8b0d.59bdb8",
+                "f0235e04.49e05",
+                "5778902d.22649",
+                "bccdf097.61ce"
+            ]
+        ]
+    },
+    {
+        "id": "bfed8b0d.59bdb8",
+        "type": "debug",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 810,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f0235e04.49e05",
+        "type": "function",
+        "z": "bdf48d2c.150ad",
+        "name": "set payload upctr",
+        "func": "// set the payload to the incremented upctr value\n// this value will be overwritten in the upctr.txt\n\nmsg.payload = global.get('upctr');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "2072b3e9.dd482c"
+            ]
+        ]
+    },
+    {
+        "id": "2072b3e9.dd482c",
+        "type": "file",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "filename": "upctr.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 480,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d8943fc7.4b447",
+        "type": "ui_text",
+        "z": "bdf48d2c.150ad",
+        "tab": "d461058f.cdc858",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": "",
+        "height": 1,
+        "name": "",
+        "label": "Betteriespannung",
+        "format": "{{msg.payload}}",
+        "x": 130,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "e648dddb.ef1f3",
+        "type": "ui_text",
+        "z": "bdf48d2c.150ad",
+        "tab": "d461058f.cdc858",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": "",
+        "height": 1,
+        "name": "",
+        "label": "Firmware Modem",
+        "format": "{{msg.payload}}",
+        "x": 130,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "d9cbde6.683202",
+        "type": "ui_text",
+        "z": "bdf48d2c.150ad",
+        "tab": "d461058f.cdc858",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": "",
+        "height": 1,
+        "name": "",
+        "label": "Software Version",
+        "format": "{{msg.payload}}",
+        "x": 130,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "62abf244.8e434c",
+        "type": "ui_text",
+        "z": "bdf48d2c.150ad",
+        "tab": "d461058f.cdc858",
+        "group": "3ad111b7.1ea05e",
+        "order": 1,
+        "width": "",
+        "height": 1,
+        "name": "",
+        "label": "Datum und Uhrzeit",
+        "format": "{{msg.payload}}",
+        "x": 130,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "71a91772.ec2028",
+        "type": "file",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "filename": "report.csv",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 340,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "fb5e003b.9fe4",
+        "type": "comment",
+        "z": "bdf48d2c.150ad",
+        "name": "Zusatzmenu",
+        "info": "",
+        "x": 110,
+        "y": 820,
         "wires": []
     }
 ]
