@@ -90,10 +90,12 @@ void loop() {
   
     // ____Setting Test number for Protocol Still outcomment____
     
-    //ttu.sendCommand("mac tx cnf 4 " + testnr ); 
+    // ttu.sendCommand("mac tx cnf 4 " + testnr ); 
    
     ttu.sendString(testnr);
+
+    // reset
     inString = ""; 
   }
-  delay(2000);
+  delay(500);
 }
