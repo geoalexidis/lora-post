@@ -13,8 +13,8 @@
     },
     {
         "type": "tab",
-        "id": "da6354af.c75a18",
-        "label": "JSON",
+        "id": "7951b5b2.48999c",
+        "label": "DB",
         "_def": {
             "defaults": {
                 "label": {
@@ -25,8 +25,8 @@
     },
     {
         "type": "tab",
-        "id": "7951b5b2.48999c",
-        "label": "DB",
+        "id": "da6354af.c75a18",
+        "label": "JSON",
         "_def": {
             "defaults": {
                 "label": {
@@ -57,7 +57,7 @@
         "cert": "",
         "key": "",
         "ca": "",
-        "verifyservercert": true
+        "verifyservercert": false
     },
     {
         "id": "33f9bed0.c8de22",
@@ -102,44 +102,6 @@
         "wires": []
     },
     {
-        "id": "9759e6be.f8eba8",
-        "type": "websocket in",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "server": "",
-        "client": "bcfb83d5.59e91",
-        "x": 360,
-        "y": 220,
-        "wires": [
-            [
-                "6f361472.785a0c"
-            ]
-        ]
-    },
-    {
-        "id": "6f361472.785a0c",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "true",
-        "x": 790,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "6554cf97.c9eb7",
-        "type": "websocket out",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "server": "",
-        "client": "bcfb83d5.59e91",
-        "x": 600,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "c128c3a9.489c6",
         "type": "http request",
         "z": "bdf48d2c.150ad",
@@ -164,7 +126,8 @@
         "y": 300,
         "wires": [
             [
-                "ff41e769.11c398"
+                "ff41e769.11c398",
+                "ccac7a7c.d42c88"
             ]
         ]
     },
@@ -175,20 +138,9 @@
         "name": "",
         "active": true,
         "console": "false",
-        "complete": "true",
-        "x": 790,
+        "complete": "payload",
+        "x": 810,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "95e4f591.535758",
-        "type": "websocket out",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "server": "a3cd8df8.205d7",
-        "client": "",
-        "x": 600,
-        "y": 480,
         "wires": []
     },
     {
@@ -227,7 +179,7 @@
         "method": "GET",
         "ret": "txt",
         "url": "https://eu1.loriot.io/apps/websocket.html?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "tls": "",
+        "tls": "18792e94.d94981",
         "x": 490,
         "y": 800,
         "wires": [
@@ -379,44 +331,6 @@
         "wires": [
             [
                 "449313c4.16285c"
-            ]
-        ]
-    },
-    {
-        "id": "be634e71.c0c6f",
-        "type": "inject",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 100,
-        "y": 400,
-        "wires": [
-            [
-                "6554cf97.c9eb7"
-            ]
-        ]
-    },
-    {
-        "id": "c40d2086.c3891",
-        "type": "inject",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 120,
-        "y": 500,
-        "wires": [
-            [
-                "95e4f591.535758"
             ]
         ]
     },
@@ -615,6 +529,19 @@
         "overwriteFile": "true",
         "x": 750,
         "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ccac7a7c.d42c88",
+        "type": "file",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "filename": "output.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 810,
+        "y": 360,
         "wires": []
     }
 ]
