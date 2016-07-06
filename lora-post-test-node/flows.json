@@ -45,7 +45,7 @@
         "id": "5c608041.649bb",
         "type": "serial-port",
         "z": "bdf48d2c.150ad",
-        "serialport": "COM8",
+        "serialport": "COM7",
         "serialbaud": "57600",
         "databits": "8",
         "parity": "none",
@@ -74,6 +74,20 @@
         "order": "1"
     },
     {
+        "id": "f9fc1653.3f9f68",
+        "type": "serial-port",
+        "z": "bdf48d2c.150ad",
+        "serialport": "COM9",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false
+    },
+    {
         "id": "aebbf418.edf888",
         "type": "ui_button",
         "z": "bdf48d2c.150ad",
@@ -84,10 +98,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR On SF12",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "1",
+        "topic": "6",
         "x": 110,
         "y": 160,
         "wires": [
@@ -107,10 +121,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF7",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "2",
+        "topic": "7",
         "x": 110,
         "y": 220,
         "wires": [
@@ -130,10 +144,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF8",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "3",
+        "topic": "8",
         "x": 110,
         "y": 280,
         "wires": [
@@ -153,10 +167,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF9",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "4",
+        "topic": "9",
         "x": 110,
         "y": 340,
         "wires": [
@@ -176,10 +190,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF10",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "5",
+        "topic": "10",
         "x": 110,
         "y": 400,
         "wires": [
@@ -199,10 +213,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF11",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "6",
+        "topic": "11",
         "x": 110,
         "y": 460,
         "wires": [
@@ -222,10 +236,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off SF12",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "7",
+        "topic": "12",
         "x": 110,
         "y": 520,
         "wires": [
@@ -245,10 +259,10 @@
         "width": 3,
         "height": 1,
         "label": "ADR Off All",
-        "color": "",
+        "color": "black",
         "icon": "",
         "payload": "",
-        "topic": "8",
+        "topic": "13",
         "x": 110,
         "y": 580,
         "wires": [
@@ -263,7 +277,7 @@
         "z": "bdf48d2c.150ad",
         "name": "",
         "serial": "5c608041.649bb",
-        "x": 790,
+        "x": 730,
         "y": 380,
         "wires": []
     },
@@ -273,10 +287,13 @@
         "z": "bdf48d2c.150ad",
         "name": "",
         "serial": "5c608041.649bb",
-        "x": 90,
-        "y": 680,
+        "x": 650,
+        "y": 520,
         "wires": [
-            []
+            [
+                "5778902d.22649",
+                "8e1075f4.8858f8"
+            ]
         ]
     },
     {
@@ -478,7 +495,7 @@
         "type": "function",
         "z": "bdf48d2c.150ad",
         "name": "set upctr, testcount",
-        "func": "/**\n * get the counter numbers. send them together\n * with the testscenario number\n * the format is: testcount,upctr,testscnerio\n * ex: 100,200,5\n * meaning: testcount 100, upctr 200, testscenario 5\n * \n * incrementing values at the end\n *\n*/\n\n// get the vars\nvar _testcount = global.get('testcount');\nvar _upctr = global.get('upctr');\n\n// set the payload to the format\nmsg.payload = global.get('testcount') + ',' + global.get('upctr') + ',';\nmsg.payload += msg.topic;\n\n// increment counters\nglobal.set('testcount', (parseInt(_testcount)  + 1));\nglobal.set('upctr', (parseInt(_upctr) + 1));\n\nreturn msg;",
+        "func": "/**\n * get the counter numbers. send them together\n * with the testscenario number\n * the format is: testcount,upctr,testscnerio\n * ex: 100,200,5\n * meaning: testcount 100, upctr 200, testscenario 5\n * \n * incrementing values at the end\n *\n*/\n\n// get the vars\nvar _testcount = global.get('testcount');\nvar _upctr = global.get('upctr');\n\n// set the payload to the format\nmsg.payload = global.get('testcount') + ',' + global.get('upctr') + ',';\nmsg.payload += msg.topic + ',';\n\n// increment counters\nglobal.set('testcount', (parseInt(_testcount)  + 1));\nglobal.set('upctr', (parseInt(_upctr) + 1));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 470,
@@ -606,8 +623,8 @@
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "false",
-        "x": 340,
-        "y": 680,
+        "x": 820,
+        "y": 520,
         "wires": []
     },
     {
@@ -618,6 +635,18 @@
         "info": "",
         "x": 110,
         "y": 820,
+        "wires": []
+    },
+    {
+        "id": "8e1075f4.8858f8",
+        "type": "debug",
+        "z": "bdf48d2c.150ad",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 820,
+        "y": 580,
         "wires": []
     }
 ]

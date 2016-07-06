@@ -1,18 +1,6 @@
 [
     {
         "type": "tab",
-        "id": "bdf48d2c.150ad",
-        "label": "Flow 1",
-        "_def": {
-            "defaults": {
-                "label": {
-                    "value": ""
-                }
-            }
-        }
-    },
-    {
-        "type": "tab",
         "id": "7951b5b2.48999c",
         "label": "DB",
         "_def": {
@@ -22,42 +10,6 @@
                 }
             }
         }
-    },
-    {
-        "type": "tab",
-        "id": "da6354af.c75a18",
-        "label": "JSON",
-        "_def": {
-            "defaults": {
-                "label": {
-                    "value": ""
-                }
-            }
-        }
-    },
-    {
-        "id": "bcfb83d5.59e91",
-        "type": "websocket-client",
-        "z": "bdf48d2c.150ad",
-        "path": "wss://eu1.loriot.io/app?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "wholemsg": "false"
-    },
-    {
-        "id": "a3cd8df8.205d7",
-        "type": "websocket-listener",
-        "z": "bdf48d2c.150ad",
-        "path": "wss://eu1.loriot.io/app?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "wholemsg": "false"
-    },
-    {
-        "id": "18792e94.d94981",
-        "type": "tls-config",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "verifyservercert": false
     },
     {
         "id": "33f9bed0.c8de22",
@@ -71,373 +23,11 @@
         "ignoredcodes": ""
     },
     {
-        "id": "b89ee77.73cdc18",
-        "type": "inject",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "55e6b9ef.3273f8"
-            ]
-        ]
-    },
-    {
-        "id": "55e6b9ef.3273f8",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 330,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "c128c3a9.489c6",
-        "type": "http request",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "url": "",
-        "x": 310,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "68225c13.1b1344",
-        "type": "websocket in",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "server": "a3cd8df8.205d7",
-        "client": "",
-        "x": 360,
-        "y": 300,
-        "wires": [
-            [
-                "ff41e769.11c398",
-                "ccac7a7c.d42c88"
-            ]
-        ]
-    },
-    {
-        "id": "ff41e769.11c398",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 810,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "bb412b41.d410d8",
-        "type": "http in",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "url": "https://eu1.loriot.io/apps/websocket.html?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "method": "get",
-        "swaggerDoc": "",
-        "x": 500,
-        "y": 680,
-        "wires": [
-            [
-                "4a35f38f.7dea5c"
-            ]
-        ]
-    },
-    {
-        "id": "4a35f38f.7dea5c",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 970,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "acb0cfc0.cbbd5",
-        "type": "http request",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "url": "https://eu1.loriot.io/apps/websocket.html?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "tls": "18792e94.d94981",
-        "x": 490,
-        "y": 800,
-        "wires": [
-            [
-                "999b0dbc.bb77b",
-                "169d9116.919def",
-                "e809470.c0668b8"
-            ]
-        ]
-    },
-    {
-        "id": "999b0dbc.bb77b",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 810,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "662cde56.64db9",
-        "type": "inject",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 280,
-        "y": 800,
-        "wires": [
-            [
-                "acb0cfc0.cbbd5"
-            ]
-        ]
-    },
-    {
-        "id": "e809470.c0668b8",
-        "type": "http response",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "x": 790,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "11b67a50.fc7fb6",
-        "type": "http in",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "url": "/test",
-        "method": "get",
-        "swaggerDoc": "",
-        "x": 270,
-        "y": 880,
-        "wires": [
-            [
-                "acb0cfc0.cbbd5"
-            ]
-        ]
-    },
-    {
-        "id": "169d9116.919def",
-        "type": "file",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "filename": "ws-answer.html",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "x": 820,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "449313c4.16285c",
-        "type": "http request",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "url": "https://eu1.loriot.io/apps/adeunis.html?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
-        "tls": "18792e94.d94981",
-        "x": 490,
-        "y": 1020,
-        "wires": [
-            [
-                "afaabefd.97131",
-                "436c54e4.8f10fc",
-                "583072d8.23f66c"
-            ]
-        ]
-    },
-    {
-        "id": "afaabefd.97131",
-        "type": "debug",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 690,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "6224dc13.a7b7d4",
-        "type": "inject",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 280,
-        "y": 1020,
-        "wires": [
-            [
-                "449313c4.16285c"
-            ]
-        ]
-    },
-    {
-        "id": "436c54e4.8f10fc",
-        "type": "http response",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "x": 690,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "375fc465.332ccc",
-        "type": "http in",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "url": "/test2",
-        "method": "get",
-        "swaggerDoc": "",
-        "x": 270,
-        "y": 1100,
-        "wires": [
-            [
-                "449313c4.16285c"
-            ]
-        ]
-    },
-    {
-        "id": "a0fc5c72.ad2c9",
-        "type": "http request",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "url": "https://eu1.loriot.io/1/data/O6ZgptcNoZw6d838drY6Ug/BE7A04B7.json",
-        "tls": "",
-        "x": 290,
-        "y": 200,
-        "wires": [
-            [
-                "e57b8e41.de4",
-                "dd252f98.08a67",
-                "804ec0f2.c5496"
-            ]
-        ]
-    },
-    {
-        "id": "e57b8e41.de4",
-        "type": "debug",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 490,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "8e004f72.5e329",
-        "type": "inject",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 100,
-        "y": 200,
-        "wires": [
-            [
-                "a0fc5c72.ad2c9"
-            ]
-        ]
-    },
-    {
-        "id": "dd252f98.08a67",
-        "type": "function",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "func": "msg.payload = msg.payload.length;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 280,
-        "wires": [
-            [
-                "70d6fa40.412884"
-            ]
-        ]
-    },
-    {
-        "id": "70d6fa40.412884",
-        "type": "debug",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 640,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "6cd8520f.0d4abc",
-        "type": "function",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "804ec0f2.c5496",
-        "type": "file",
-        "z": "da6354af.c75a18",
-        "name": "",
-        "filename": "payload.json",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "x": 490,
-        "y": 140,
-        "wires": []
+        "id": "f376327f.9e658",
+        "type": "websocket-listener",
+        "z": "7951b5b2.48999c",
+        "path": "wss://eu1.loriot.io/app?id=BE7A04B7&token=O6ZgptcNoZw6d838drY6Ug",
+        "wholemsg": "false"
     },
     {
         "id": "86feef39.1742c",
@@ -445,10 +35,10 @@
         "z": "7951b5b2.48999c",
         "service": "_ext_",
         "configNode": "33f9bed0.c8de22",
-        "name": "",
+        "name": "history",
         "collection": "history",
-        "operation": "insertOne",
-        "x": 590,
+        "operation": "insert",
+        "x": 490,
         "y": 320,
         "wires": [
             [
@@ -470,7 +60,7 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 80,
+        "x": 120,
         "y": 320,
         "wires": [
             [
@@ -486,11 +76,12 @@
         "func": "msg.payload = {'data': msg.payload}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 260,
+        "x": 270,
         "y": 320,
         "wires": [
             [
-                "86feef39.1742c"
+                "86feef39.1742c",
+                "385ca1cd.06080e"
             ]
         ]
     },
@@ -502,8 +93,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 950,
-        "y": 360,
+        "x": 930,
+        "y": 260,
         "wires": []
     },
     {
@@ -511,37 +102,100 @@
         "type": "debug",
         "z": "7951b5b2.48999c",
         "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "385ca1cd.06080e",
+        "type": "debug",
+        "z": "7951b5b2.48999c",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c07e3a92.c6bdf8",
+        "type": "websocket in",
+        "z": "7951b5b2.48999c",
+        "name": "loriot",
+        "server": "f376327f.9e658",
+        "client": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "f19ef72d.aea048",
+                "2c4c3977.cab276"
+            ]
+        ]
+    },
+    {
+        "id": "f19ef72d.aea048",
+        "type": "debug",
+        "z": "7951b5b2.48999c",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 510,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "edf71aad.ccec68",
+        "type": "catch",
+        "z": "7951b5b2.48999c",
+        "name": "",
+        "scope": null,
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "5c0fcbba.7f54b4"
+            ]
+        ]
+    },
+    {
+        "id": "5c0fcbba.7f54b4",
+        "type": "debug",
+        "z": "7951b5b2.48999c",
+        "name": "",
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 960,
-        "y": 440,
+        "x": 370,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "583072d8.23f66c",
-        "type": "file",
-        "z": "bdf48d2c.150ad",
+        "id": "2c4c3977.cab276",
+        "type": "json",
+        "z": "7951b5b2.48999c",
         "name": "",
-        "filename": "ws-answer-adeunis.html",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "x": 750,
-        "y": 1060,
-        "wires": []
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "86feef39.1742c"
+            ]
+        ]
     },
     {
-        "id": "ccac7a7c.d42c88",
-        "type": "file",
-        "z": "bdf48d2c.150ad",
-        "name": "",
-        "filename": "output.json",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "x": 810,
-        "y": 360,
+        "id": "e0b191dc.a2808",
+        "type": "comment",
+        "z": "7951b5b2.48999c",
+        "name": "Timestamp for test",
+        "info": "",
+        "x": 150,
+        "y": 280,
         "wires": []
     }
 ]
